@@ -18,11 +18,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Inicia a tela de Login
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
 
-        // Finaliza a MainActivity
         finish()
     }
 }

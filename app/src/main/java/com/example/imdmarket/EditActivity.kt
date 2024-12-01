@@ -19,7 +19,6 @@ class EditActivity : ComponentActivity() {
         val editButton = findViewById<Button>(R.id.editButton)
         val clearButton = findViewById<Button>(R.id.clearButton)
 
-        // Botão para carregar os dados do produto pelo código
         val loadButton = findViewById<Button>(R.id.loadButton)
         loadButton.setOnClickListener {
             val code = codeField.text.toString()
@@ -36,7 +35,6 @@ class EditActivity : ComponentActivity() {
             }
         }
 
-        // Botão para salvar as alterações
         editButton.setOnClickListener {
             val code = codeField.text.toString()
             val name = nameField.text.toString()
@@ -50,8 +48,8 @@ class EditActivity : ComponentActivity() {
                 val produto = app.listaProdutos.find { it.codigo == code }
 
                 if (produto != null) {
-                    app.listaProdutos.remove(produto) // Remove o produto antigo
-                    app.listaProdutos.add(Produto(code, name, description, stock)) // Adiciona o produto atualizado
+                    app.listaProdutos.remove(produto)
+                    app.listaProdutos.add(Produto(code, name, description, stock))
                     Toast.makeText(this, "Produto alterado com sucesso!", Toast.LENGTH_SHORT).show()
                     finish()
                 } else {
@@ -60,7 +58,6 @@ class EditActivity : ComponentActivity() {
             }
         }
 
-        // Botão para limpar os campos
         clearButton.setOnClickListener {
             codeField.text.clear()
             nameField.text.clear()
@@ -68,7 +65,6 @@ class EditActivity : ComponentActivity() {
             stockField.text.clear()
         }
 
-        // Botão para voltar ao menu
         val backButton = findViewById<Button>(R.id.backButton)
         backButton.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
