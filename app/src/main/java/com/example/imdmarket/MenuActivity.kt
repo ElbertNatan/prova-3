@@ -2,32 +2,32 @@ package com.example.imdmarket
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import com.example.imdmarket.databinding.ActivityMenuBinding
 import androidx.activity.ComponentActivity
 
 class MenuActivity : ComponentActivity() {
+    private lateinit var binding: ActivityMenuBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu)
 
-        val registerButton = findViewById<Button>(R.id.registerButton)
-        val editButton = findViewById<Button>(R.id.editButton)
-        val deleteButton = findViewById<Button>(R.id.deleteButton)
-        val listButton = findViewById<Button>(R.id.listButton)
+        binding = ActivityMenuBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        registerButton.setOnClickListener {
+        // Configura os botões
+        binding.registerButton.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
 
-        editButton.setOnClickListener {
+        binding.editButton.setOnClickListener {
             startActivity(Intent(this, EditActivity::class.java))
         }
 
-        deleteButton.setOnClickListener {
+        binding.deleteButton.setOnClickListener {
             startActivity(Intent(this, DeleteActivity::class.java))
         }
 
-        listButton.setOnClickListener {
+        binding.listButton.setOnClickListener {
             startActivity(Intent(this, ListActivity::class.java))
         }
     }

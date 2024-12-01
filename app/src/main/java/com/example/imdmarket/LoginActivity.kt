@@ -2,26 +2,28 @@ package com.example.imdmarket
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
+import com.example.imdmarket.databinding.ActivityLoginBinding
 import androidx.activity.ComponentActivity
 
 class LoginActivity : ComponentActivity() {
+    private lateinit var binding: ActivityLoginBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
 
-        val sharedPreferences = getSharedPreferences("LoginPrefs", MODE_PRIVATE)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString("username", "admin")
         editor.putString("password", "admin")
         editor.apply()
 
-        val loginButton = findViewById<Button>(R.id.loginButton)
-        loginButton.setOnClickListener {
-            val usernameField = findViewById<EditText>(R.id.username).text.toString()
-            val passwordField = findViewById<EditText>(R.id.password).text.toString()
+        binding.loginButton.setOnClickListener {
+            val usernameField = binding.username.text.toString()
+            val passwordField = binding.password.text.toString()
             val username = sharedPreferences.getString("username", "")
             val password = sharedPreferences.getString("password", "")
 
