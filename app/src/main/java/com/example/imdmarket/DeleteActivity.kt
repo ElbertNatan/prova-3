@@ -27,6 +27,8 @@ class DeleteActivity : ComponentActivity() {
                     app.listaProdutos.remove(produto)
                     Toast.makeText(this, "Produto deletado com sucesso!", Toast.LENGTH_SHORT).show()
                     binding.code.text.clear()
+                    startActivity(Intent(this, MenuActivity::class.java))
+                    finish()
                 } else {
                     Toast.makeText(this, "Produto não encontrado!", Toast.LENGTH_SHORT).show()
                 }
