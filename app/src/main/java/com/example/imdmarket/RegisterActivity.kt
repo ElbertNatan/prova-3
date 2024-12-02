@@ -21,19 +21,17 @@ class RegisterActivity : ComponentActivity() {
             val description = binding.description.text.toString()
             val stock = binding.stock.text.toString().toIntOrNull()
 
-            if (code.isEmpty() || name.isEmpty() || stock == null) {
-                Toast.makeText(this, "Preencha todos os campos obrigatórios!", Toast.LENGTH_SHORT).show()
+            if (code.isEmpty()) {
+                Toast.makeText(this, "Campo do código é obrigatório", Toast.LENGTH_SHORT).show()
+            } else if (name.isEmpty()) {
+                Toast.makeText(this, "Campo do nome é obrigatório", Toast.LENGTH_SHORT).show()
+            } else if (description.isEmpty()) {
+                Toast.makeText(this, "Campo da descrição é obrigatório", Toast.LENGTH_SHORT).show()
+            } else if (stock == null) {
+                Toast.makeText(this, "Campo de quantidade é obrigatório", Toast.LENGTH_SHORT).show()
             } else {
-                val produto = Produto(code, name, description, stock)
-                val app = application as ProductApp
-
-                if (app.listaProdutos.any { it.codigo == code }) {
-                    Toast.makeText(this, "Produto com este código já existe!", Toast.LENGTH_SHORT).show()
-                } else {
-                    app.listaProdutos.add(produto)
-                    Toast.makeText(this, "Produto cadastrado com sucesso!", Toast.LENGTH_SHORT).show()
-                    finish()
-                }
+                Toast.makeText(this, "Produto Criado com sucesso", Toast.LENGTH_SHORT).show()
+                finish()
             }
         }
 
