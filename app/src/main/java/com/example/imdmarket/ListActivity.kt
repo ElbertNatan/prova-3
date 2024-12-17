@@ -15,7 +15,10 @@ class ListActivity : ComponentActivity() {
         binding = ActivityListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val productNames = listOf("Produto teste 1", "Produto teste 2")
+        val produtos = (application as ProductApp).listaProdutos.toList()
+        val productNames = produtos.map { produto ->
+            "Código: ${produto.codigo}\nNome: ${produto.nome}\nEstoque: ${produto.estoque}"
+        }
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, productNames)
         binding.productList.adapter = adapter
 

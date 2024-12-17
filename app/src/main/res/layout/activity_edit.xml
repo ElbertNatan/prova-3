@@ -38,6 +38,16 @@
         android:hint="Código do Produto"
         android:inputType="text" />
 
+    <Button
+        android:id="@+id/loadButton"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#6200EA"
+        android:text="Procurar"
+        android:textColor="#FFFFFF" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
