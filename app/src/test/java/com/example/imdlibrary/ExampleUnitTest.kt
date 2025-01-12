@@ -1,4 +1,4 @@
-package com.example.imdmarket
+package com.example.imdlibrary
 
 import org.junit.Test
 

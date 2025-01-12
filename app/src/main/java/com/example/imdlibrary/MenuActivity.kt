@@ -1,9 +1,9 @@
-package com.example.imdmarket
+package com.example.imdlibrary
 
 import android.content.Intent
 import android.os.Bundle
-import com.example.imdmarket.databinding.ActivityMenuBinding
 import androidx.activity.ComponentActivity
+import com.example.imdlibrary.databinding.ActivityMenuBinding
 
 class MenuActivity : ComponentActivity() {
     private lateinit var binding: ActivityMenuBinding

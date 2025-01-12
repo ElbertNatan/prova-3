@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:name=".ProductApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,25 +10,68 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.IMDMarket"
+        android:theme="@style/Theme.IMDLibrary"
         tools:targetApi="31">
+
+        <!-- Tela Inicial -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.IMDMarket">
+            android:theme="@style/Theme.IMDLibrary">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".DeleteActivity" />
-        <activity android:name=".ListActivity" />
-        <activity android:name=".EditActivity" />
+
+        <!-- Login -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="Login" />
+
+        <!-- Registro de Produtos -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="Registrar Produto" />
+
+        <!-- Menu -->
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false"
+            android:label="Menu" />
+
+        <!-- Listagem -->
+        <activity
+            android:name=".ListActivity"
+            android:exported="false"
+            android:label="Lista de Produtos" />
+
+        <!-- Edição -->
+        <activity
+            android:name=".EditActivity"
+            android:exported="false"
+            android:label="Editar Produto" />
+
+        <!-- Exclusão -->
+        <activity
+            android:name=".DeleteActivity"
+            android:exported="false"
+            android:label="Deletar Produto" />
+
+        <!-- Registro de Usuários -->
+        <activity
+            android:name=".RegisterUserActivity"
+            android:exported="false"
+            android:label="Cadastrar Usuário" />
+
+        <!-- Redefinição de Senha -->
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false"
+            android:label="Redefinir Senha" />
     </application>
 
 </manifest>

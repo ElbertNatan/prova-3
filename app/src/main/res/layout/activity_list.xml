@@ -8,10 +8,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF5722"
+        android:background="#00A8FF"
         android:gravity="center"
         android:padding="16dp"
-        android:text="IMDMARKET"
+        android:text="IMDLIBRARY"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -21,13 +21,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
-        android:text="LISTA DE PRODUTOS"
+        android:text="LISTA DE LIVROS"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <ListView
-        android:id="@+id/product_list"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#6200EA"
+        android:backgroundTint="#00A8FF"
         android:text="Voltar"
         android:textColor="#FFFFFF" />
 </LinearLayout>

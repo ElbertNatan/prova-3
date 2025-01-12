@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.imdmarket"
+    namespace = "com.example.imdlibrary"
     compileSdk = 34
 
     defaultConfig {
@@ -41,7 +41,12 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.picasso)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.material3)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

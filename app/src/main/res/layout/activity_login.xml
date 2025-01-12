@@ -9,10 +9,10 @@
         android:id="@+id/app_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF5722"
+        android:background="#00A8FF"
         android:gravity="center"
         android:padding="16dp"
-        android:text="IMDMARKET"
+        android:text="IMDLIBRARY"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -63,11 +63,21 @@
         android:layout_width="176dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="#6200EA"
+        android:backgroundTint="#00A8FF"
         android:text="ENTRAR"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/registerUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="Cadastrar novo usuário"
+        android:textColor="#0000FF"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/forgot_login"

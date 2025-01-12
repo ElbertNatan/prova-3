@@ -8,10 +8,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF5722"
+        android:background="#00A8FF"
         android:gravity="center"
         android:padding="16dp"
-        android:text="IMDMARKET"
+        android:text="Editar Livro"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -20,31 +20,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:gravity="center_horizontal"
-        android:text="ALTERAR PRODUTO"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Código produto:"
+        android:text="ISBN:"
         android:textColor="#000000" />
     <EditText
         android:id="@+id/code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Código do Produto"
+        android:hint="Digite o ISBN"
         android:inputType="text" />
 
     <Button
         android:id="@+id/loadButton"
-        android:layout_width="118dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#6200EA"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#00A8FF"
         android:text="Procurar"
         android:textColor="#FFFFFF" />
 
@@ -52,72 +42,97 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Nome produto:"
+        android:text="Título:"
         android:textColor="#000000" />
     <EditText
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nome do Produto"
+        android:hint="Digite o título"
         android:inputType="text" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Descrição do produto:"
+        android:text="Autor:"
+        android:textColor="#000000" />
+    <EditText
+        android:id="@+id/author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o autor"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Editora:"
+        android:textColor="#000000" />
+    <EditText
+        android:id="@+id/publisher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a editora"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Descrição:"
         android:textColor="#000000" />
     <EditText
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descrição do Produto"
-        android:inputType="text" />
+        android:hint="Digite a descrição"
+        android:inputType="textMultiLine" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Estoque:"
+        android:text="URL da capa:"
         android:textColor="#000000" />
     <EditText
-        android:id="@+id/stock"
+        android:id="@+id/url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Estoque"
-        android:inputType="number" />
+        android:hint="Digite a URL"
+        android:inputType="textUri" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
         android:layout_marginTop="16dp">
 
         <Button
             android:id="@+id/editButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#6200EA"
+            android:backgroundTint="#00A8FF"
             android:text="Alterar"
-            android:textColor="#FFFFFF"
-            android:layout_marginEnd="8dp" />
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/clearButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#6200EA"
+            android:backgroundTint="#00A8FF"
             android:text="Limpar"
             android:textColor="#FFFFFF" />
     </LinearLayout>
+
     <Button
         android:id="@+id/backButton"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="118dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#6200EA"
+        android:backgroundTint="#00A8FF"
         android:text="Voltar"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
 </LinearLayout>
