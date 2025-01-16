@@ -8,12 +8,11 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
 
     companion object {
         const val DATABASE_NAME = "IMDLibrary.db"
-        const val DATABASE_VERSION = 2 // Atualize a versão do banco para 2
+        const val DATABASE_VERSION = 2
 
         const val TABLE_BOOKS = "books"
         const val TABLE_USERS = "users"
 
-        // Colunas de livros
         const val ISBN = "isbn"
         const val TITLE = "title"
         const val AUTHOR = "author"
@@ -22,7 +21,6 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         const val YEAR = "year"
         const val URL = "url"
 
-        // Colunas de usuários
         const val USER_ID = "id"
         const val USERNAME = "username"
         const val PASSWORD = "password"
@@ -52,13 +50,11 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         db.execSQL(createBooksTable)
         db.execSQL(createUsersTable)
 
-        // Inserir usuário padrão
         db.execSQL("INSERT INTO $TABLE_USERS ($USERNAME, $PASSWORD) VALUES ('admin', 'admin')")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         if (oldVersion < 2) {
-            // Adiciona a coluna YEAR na tabela de livros
             db.execSQL("ALTER TABLE $TABLE_BOOKS ADD COLUMN $YEAR TEXT DEFAULT ''")
         }
     }

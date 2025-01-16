@@ -17,7 +17,6 @@ class ResetPasswordActivity : ComponentActivity() {
 
         dbHelper = DatabaseHelper(this)
 
-        // Botão para redefinir a senha
         binding.resetButton.setOnClickListener {
             val username = binding.username.text.toString()
             val oldPassword = binding.oldPassword.text.toString()
@@ -35,9 +34,8 @@ class ResetPasswordActivity : ComponentActivity() {
             }
         }
 
-        // Botão para voltar à tela anterior
         binding.backButton.setOnClickListener {
-            finish() // Fecha a tela atual e retorna à anterior
+            finish()
         }
     }
 
@@ -62,7 +60,7 @@ class ResetPasswordActivity : ComponentActivity() {
     private fun updatePassword(username: String, newPassword: String) {
         val db = dbHelper.writableDatabase
         val values = ContentValues().apply {
-            put(DatabaseHelper.PASSWORD, newPassword) // Atualiza a senha corretamente
+            put(DatabaseHelper.PASSWORD, newPassword)
         }
 
         val rowsUpdated = db.update(

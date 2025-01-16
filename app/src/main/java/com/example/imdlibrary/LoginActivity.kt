@@ -34,12 +34,10 @@ class LoginActivity : ComponentActivity() {
             }
         }
 
-        // Navegar para a tela de cadastro de usuário
         binding.registerUser.setOnClickListener {
             startActivity(Intent(this, RegisterUserActivity::class.java))
         }
 
-        // Navegar para a tela de redefinição de senha
         binding.forgotLogin.setOnClickListener {
             startActivity(Intent(this, ResetPasswordActivity::class.java))
         }

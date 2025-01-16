@@ -18,7 +18,6 @@ class EditActivity : ComponentActivity() {
 
         dbHelper = DatabaseHelper(this)
 
-        // Botão para carregar os dados de um livro
         binding.loadButton.setOnClickListener {
             val isbn = binding.code.text.toString()
 
@@ -53,7 +52,6 @@ class EditActivity : ComponentActivity() {
             db.close()
         }
 
-        // Botão para atualizar os dados de um livro
         binding.editButton.setOnClickListener {
             val isbn = binding.code.text.toString()
             val title = binding.name.text.toString()
@@ -94,10 +92,8 @@ class EditActivity : ComponentActivity() {
             db.close()
         }
 
-        // Botão para limpar os campos
         binding.clearButton.setOnClickListener { clearFields() }
 
-        // Botão para voltar ao menu
         binding.backButton.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java))
             finish()

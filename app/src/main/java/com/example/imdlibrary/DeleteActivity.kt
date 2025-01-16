@@ -18,7 +18,6 @@ class DeleteActivity : ComponentActivity() {
 
         dbHelper = DatabaseHelper(this)
 
-        // Botão para deletar o livro
         binding.deleteButton.setOnClickListener {
             val isbn = binding.code.text.toString()
 
@@ -42,12 +41,10 @@ class DeleteActivity : ComponentActivity() {
             }
         }
 
-        // Botão para limpar os campos
         binding.clearButton.setOnClickListener {
             binding.code.text.clear()
         }
 
-        // Botão para voltar ao menu
         binding.backButton.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java))
             finish()
