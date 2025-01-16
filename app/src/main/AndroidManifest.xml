@@ -72,6 +72,13 @@
             android:name=".ResetPasswordActivity"
             android:exported="false"
             android:label="Redefinir Senha" />
+
+        <!-- Detalhamento do Livro -->
+        <activity
+            android:name=".BookDetailsActivity"
+            android:exported="false"
+            android:label="Detalhes do Livro" />
+
     </application>
 
 </manifest>

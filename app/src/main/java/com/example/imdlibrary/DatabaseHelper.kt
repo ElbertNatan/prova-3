@@ -8,7 +8,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
 
     companion object {
         const val DATABASE_NAME = "IMDLibrary.db"
-        const val DATABASE_VERSION = 1
+        const val DATABASE_VERSION = 2 // Atualize a versão do banco para 2
 
         const val TABLE_BOOKS = "books"
         const val TABLE_USERS = "users"
@@ -57,8 +57,9 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        db.execSQL("DROP TABLE IF EXISTS $TABLE_BOOKS")
-        db.execSQL("DROP TABLE IF EXISTS $TABLE_USERS")
-        onCreate(db)
+        if (oldVersion < 2) {
+            // Adiciona a coluna YEAR na tabela de livros
+            db.execSQL("ALTER TABLE $TABLE_BOOKS ADD COLUMN $YEAR TEXT DEFAULT ''")
+        }
     }
 }
