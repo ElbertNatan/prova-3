@@ -19,6 +19,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         const val AUTHOR = "author"
         const val PUBLISHER = "publisher"
         const val DESCRIPTION = "description"
+        const val YEAR = "year"
         const val URL = "url"
 
         // Colunas de usuários
@@ -35,6 +36,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 $AUTHOR TEXT DEFAULT '',
                 $PUBLISHER TEXT DEFAULT '',
                 $DESCRIPTION TEXT DEFAULT '',
+                $YEAR TEXT DEFAULT '',
                 $URL TEXT DEFAULT ''
             )
         """.trimIndent()

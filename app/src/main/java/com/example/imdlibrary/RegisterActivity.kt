@@ -24,6 +24,7 @@ class RegisterActivity : ComponentActivity() {
             val author = binding.author.text.toString()
             val publisher = binding.publisher.text.toString()
             val description = binding.description.text.toString()
+            val year = binding.year.text.toString()
             val url = binding.url.text.toString()
 
             if (isbn.isEmpty() || title.isEmpty()) {
@@ -36,6 +37,7 @@ class RegisterActivity : ComponentActivity() {
                     put(DatabaseHelper.AUTHOR, author)
                     put(DatabaseHelper.PUBLISHER, publisher)
                     put(DatabaseHelper.DESCRIPTION, description)
+                    put(DatabaseHelper.YEAR, year)
                     put(DatabaseHelper.URL, url)
                 }
 
@@ -64,6 +66,7 @@ class RegisterActivity : ComponentActivity() {
         binding.author.text.clear()
         binding.publisher.text.clear()
         binding.description.text.clear()
+        binding.year.text.clear()
         binding.url.text.clear()
     }
 }

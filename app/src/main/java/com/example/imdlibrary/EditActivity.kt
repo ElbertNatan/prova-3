@@ -43,6 +43,7 @@ class EditActivity : ComponentActivity() {
                 binding.author.setText(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.AUTHOR)))
                 binding.publisher.setText(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.PUBLISHER)))
                 binding.description.setText(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.DESCRIPTION)))
+                binding.year.setText(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.YEAR)))
                 binding.url.setText(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.URL)))
                 Toast.makeText(this, "Livro carregado com sucesso!", Toast.LENGTH_SHORT).show()
             } else {
@@ -59,6 +60,7 @@ class EditActivity : ComponentActivity() {
             val author = binding.author.text.toString()
             val publisher = binding.publisher.text.toString()
             val description = binding.description.text.toString()
+            val year = binding.year.text.toString()
             val url = binding.url.text.toString()
 
             if (isbn.isEmpty() || title.isEmpty()) {
@@ -72,6 +74,7 @@ class EditActivity : ComponentActivity() {
                 put(DatabaseHelper.AUTHOR, author)
                 put(DatabaseHelper.PUBLISHER, publisher)
                 put(DatabaseHelper.DESCRIPTION, description)
+                put(DatabaseHelper.YEAR, year)
                 put(DatabaseHelper.URL, url)
             }
 

@@ -14,6 +14,7 @@ data class Book(
     val author: String,
     val publisher: String,
     val description: String,
+    val year: String,
     val imageUrl: String
 )
 
@@ -23,7 +24,7 @@ class BookAdapter(private val books: List<Book>) :
     class BookViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val bookImage: ImageView = view.findViewById(R.id.bookImage)
         val bookTitle: TextView = view.findViewById(R.id.bookTitle)
-        val bookAuthor: TextView = view.findViewById(R.id.bookAuthor)
+        val bookYear: TextView = view.findViewById(R.id.bookYear)
         val bookPublisher: TextView = view.findViewById(R.id.bookPublisher)
     }
 
@@ -36,7 +37,7 @@ class BookAdapter(private val books: List<Book>) :
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         val book = books[position]
         holder.bookTitle.text = book.title
-        holder.bookAuthor.text = "Autor: ${book.author}"
+        holder.bookYear.text = "Ano: ${book.year}"
         holder.bookPublisher.text = "Editora: ${book.publisher}"
         Picasso.get().load(book.imageUrl).placeholder(R.drawable.ic_launcher_background).into(holder.bookImage)
     }

@@ -49,6 +49,7 @@ class ListActivity : ComponentActivity() {
                 author = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.AUTHOR)),
                 publisher = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.PUBLISHER)),
                 description = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.DESCRIPTION)),
+                year = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.YEAR)),
                 imageUrl = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.URL))
             )
             books.add(book)

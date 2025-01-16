@@ -26,17 +26,17 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/bookAuthor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Autor"
-            android:textSize="14sp" />
-
-        <TextView
             android:id="@+id/bookPublisher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Editora"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/bookYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ano"
             android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>
