@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
-        android:text="DELETAR PRODUTO"
+        android:text="DELETAR LIVRO"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -30,14 +30,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="ISBN do Produto:"
+        android:text="ISBN do Livro:"
         android:textColor="#000000" />
 
     <EditText
         android:id="@+id/code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Digite o ISBN do produto"
+        android:hint="Digite o ISBN do livro"
         android:inputType="text" />
 
     <LinearLayout

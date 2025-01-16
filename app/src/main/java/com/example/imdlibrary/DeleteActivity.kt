@@ -18,12 +18,12 @@ class DeleteActivity : ComponentActivity() {
 
         dbHelper = DatabaseHelper(this)
 
-        // Botão para deletar o produto
+        // Botão para deletar o livro
         binding.deleteButton.setOnClickListener {
             val isbn = binding.code.text.toString()
 
             if (isbn.isEmpty()) {
-                Toast.makeText(this, "Por favor, insira o ISBN do produto.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Por favor, insira o ISBN do livro.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -36,10 +36,10 @@ class DeleteActivity : ComponentActivity() {
             db.close()
 
             if (rowsDeleted > 0) {
-                Toast.makeText(this, "Produto deletado com sucesso!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Livro deletado com sucesso!", Toast.LENGTH_SHORT).show()
                 binding.code.text.clear()
             } else {
-                Toast.makeText(this, "Produto não encontrado!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Livro não encontrado!", Toast.LENGTH_SHORT).show()
             }
         }
 

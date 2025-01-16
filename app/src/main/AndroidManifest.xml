@@ -31,11 +31,11 @@
             android:exported="true"
             android:label="Login" />
 
-        <!-- Registro de Produtos -->
+        <!-- Registro de Livros -->
         <activity
             android:name=".RegisterActivity"
             android:exported="false"
-            android:label="Registrar Produto" />
+            android:label="Registrar Livro" />
 
         <!-- Menu -->
         <activity
@@ -47,19 +47,19 @@
         <activity
             android:name=".ListActivity"
             android:exported="false"
-            android:label="Lista de Produtos" />
+            android:label="Lista de Livros" />
 
         <!-- Edição -->
         <activity
             android:name=".EditActivity"
             android:exported="false"
-            android:label="Editar Produto" />
+            android:label="Editar Livro" />
 
         <!-- Exclusão -->
         <activity
             android:name=".DeleteActivity"
             android:exported="false"
-            android:label="Deletar Produto" />
+            android:label="Deletar Livro" />
 
         <!-- Registro de Usuários -->
         <activity
