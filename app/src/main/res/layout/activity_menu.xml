@@ -5,17 +5,36 @@
     android:background="#FFF8F8"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/app_title"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#00A8FF"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="IMDLIBRARY"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:padding="16dp">
+
+        <!-- Título do app -->
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IMDLIBRARY"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <!-- Botão de logout -->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sair"
+            android:backgroundTint="#FF0000"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/instruction_label"
@@ -85,4 +104,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1" />
     </GridLayout>
+
+    <!-- Botão para deslogar -->
+
 </LinearLayout>
