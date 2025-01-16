@@ -33,11 +33,10 @@ class DeleteActivity : ComponentActivity() {
                 "${DatabaseHelper.ISBN} = ?",
                 arrayOf(isbn)
             )
-            db.close()
 
             if (rowsDeleted > 0) {
                 Toast.makeText(this, "Livro deletado com sucesso!", Toast.LENGTH_SHORT).show()
-                binding.code.text.clear()
+                finish()
             } else {
                 Toast.makeText(this, "Livro não encontrado!", Toast.LENGTH_SHORT).show()
             }

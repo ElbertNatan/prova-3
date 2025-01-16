@@ -87,7 +87,7 @@ class EditActivity : ComponentActivity() {
 
             if (rowsUpdated > 0) {
                 Toast.makeText(this, "Livro atualizado com sucesso!", Toast.LENGTH_SHORT).show()
-                clearFields()
+                finish()
             } else {
                 Toast.makeText(this, "Erro ao atualizar o livro!", Toast.LENGTH_SHORT).show()
             }

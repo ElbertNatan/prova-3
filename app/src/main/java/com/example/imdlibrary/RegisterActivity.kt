@@ -42,13 +42,13 @@ class RegisterActivity : ComponentActivity() {
                 }
 
                 val result = db.insert(DatabaseHelper.TABLE_BOOKS, null, values)
-
                 if (result == -1L) {
                     Toast.makeText(this, "Erro ao cadastrar o livro!", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this, "Livro cadastrado com sucesso!", Toast.LENGTH_SHORT).show()
-                    clearFields()
+                    finish()
                 }
+
                 db.close()
             }
         }
